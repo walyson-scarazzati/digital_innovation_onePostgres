@@ -1,3 +1,9 @@
+SELECT 'CREATE DATABASE Financas'
+WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'Financas');
+
+create database Financas;
+
+---------------------------------------------
 CREATE TABLE IF NOT EXISTS banco (
 	numero INTEGER NOT NULL,
 	nome VARCHAR(50) NOT NULL,
